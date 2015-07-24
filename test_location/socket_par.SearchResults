@@ -1,0 +1,9 @@
+---- _bzero Matches (8 in 4 files) ----
+Internet.c (sokcet):        __bzero(&hint, sizeof(struct addrinfo));
+Internet.c (sokcet):    __bzero(&hint, sizeof(struct addrinfo));
+Json_test.c (sokcet):    __bzero(pbuffer, sizeof(pbuffer));
+String.h (include):extern void __bzero (void *__s, size_t __n) __THROW __nonnull ((1));
+String2.h (include\i386-linux-gnu\bits):		     ? ({ void *__s = (s); __bzero (__s, n); __s; })	      \
+String2.h (include\i386-linux-gnu\bits):		  ? ({ void *__s = (s); __bzero (__s, n); __s; })	      \
+String2.h (include\i386-linux-gnu\bits):   GCC 3.0+ has __builtin_bzero as well, but at least till GCC 3.4
+String2.h (include\i386-linux-gnu\bits):#  define __bzero(s, n) __builtin_memset (s, '\0', n)
